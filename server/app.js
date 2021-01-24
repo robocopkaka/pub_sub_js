@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import topics from "./routes/topics";
 import subscriptions from './routes/subscriptions';
 import publish from './routes/publish';

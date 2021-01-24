@@ -3,7 +3,6 @@ import { Subscription, Topic } from '../models';
 
 export const validateSubscription = (req, res, next) => {
   const { body: { url }, params: { topic } } = req;
-  console.log(url)
   
   if (!validUrl.isUri(url)) {
     return res.status(400).json({ message: 'The url entered is invalid. Please retry.' })
