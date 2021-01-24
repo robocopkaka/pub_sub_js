@@ -14,7 +14,7 @@ export default class PublishController {
           urls.forEach((url) => {
             axios.post(url, data)
           })
-          res.status(200).json({ message: "Published successfully" })
+          res.status(200).json({ message: `Published successfully to ${urls.length} subscribers` })
         } else {
           res.status(200).json({ message: "No subscribers yet" })
         }

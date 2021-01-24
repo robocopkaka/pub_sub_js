@@ -3,7 +3,7 @@ import { Topic } from '../models';
 export const validateTopic = (req, res, next) => {
   const { name } = req.body;
   
-  if (/^[a-z]+[0-9_-]*$/i.test(name) === false) {
+  if (/^[a-z]+[a-z0-9_-]*$/i.test(name) === false) {
     return res.status(400).json({ message: 'Please pass a valid name' })
   }
   
