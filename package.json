@@ -9,6 +9,12 @@
     "transpile": "babel ./server --out-dir dist-server",
     "clean": "rimraf dist-server",
     "build": "npm run clean && npm run transpile",
+    "clean:subscriber": "rimraf dist-subscriber",
+    "transpile:subscriber": "babel ./subscriber --out-dir dist-subscriber",
+    "build:subscriber": "npm run clean:subscriber && npm run transpile:subscriber",
+    "server:subscriber": "node ./dist-subscriber/bin/www",
+    "dev:subscriber": "NODE_ENV=development npm run build:subscriber && npm run server:subscriber",
+    "start:subscriber": "node ./subscriber/bin/www.js",
     "watch:dev": "nodemon"
   },
   "dependencies": {
@@ -16,6 +22,7 @@
     "@babel/core": "^7.12.10",
     "@babel/node": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "axios": "^0.21.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
