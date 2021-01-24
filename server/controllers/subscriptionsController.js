@@ -10,7 +10,6 @@ export default  class SubscriptionsController {
         res.status(201).json({
           url: subscription.url,
           topic: topic.name,
-          message: 'Successfully subscribed to topic'
         })
       }).catch(() => {
         res.status(500).json({ message: 'Internal server error' })
