@@ -35,7 +35,8 @@
     "pg-hstore": "^2.3.3",
     "rimraf": "^3.0.2",
     "sequelize": "^6.4.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "valid-url": "^1.0.9"
   },
   "babel": {
     "presets": [
